@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
+
+    <link rel="icon" href="devchallenges.png" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <title>Devchallenges</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="container__title">Checkout</h1>
+      <div class="content">
+        <div class="data">
+          <div class="data-contact">
+            <h2 class="data-contact__title">Contact infomation</h2>
+            <form action="" class="data-contact-form">
+              <div class="data-contact__email">
+                <p>E-mail</p>
+                <div class="data-contact__email-container">
+                  <picture class="data-contact__email-icon">
+                    <img src="./images/email.svg" alt="" />
+                  </picture>
+                  <input
+                    type="email"
+                    placeholder="Enter your email..."
+                    required
+                  />
+                </div>
+              </div>
+              <div class="data-contact__phone">
+                <p>Phone</p>
+                <div class="data-contact__phone-container">
+                  <picture class="data-contact__phone-icon">
+                    <img src="./images/phone.svg" alt="" />
+                  </picture>
+                  <input
+                    type="text"
+                    maxlength="9"
+                    placeholder="Enter your phone..."
+                    required
+                  />
+                </div>
+              </div>
+              <h2 class="data-shipping__title">Shipping address</h2>
+              <div class="data-shipping__name">
+                <p>Full name</p>
+                <div class="data-shipping__name-container">
+                  <picture class="data-shipping__name-icon">
+                    <img src="./images/user.svg" alt="" />
+                  </picture>
+                  <input type="text" placeholder="Your name.." required />
+                </div>
+              </div>
+              <div class="data-shipping__address">
+                <p>Address</p>
+                <div class="data-shipping__address-container">
+                  <picture class="data-shipping__address-icon">
+                    <img src="./images/home.svg" alt="" />
+                  </picture>
+                  <input type="text" placeholder="Your address.." required />
+                </div>
+              </div>
+              <div class="data-shipping__city">
+                <p>City</p>
+                <div class="data-shipping__city-container">
+                  <picture class="data-shipping__city-icon">
+                    <img src="./images/city.svg" alt="" />
+                  </picture>
+                  <input type="text" placeholder="Your city.." required />
+                </div>
+              </div>
+              <div class="data-shipping__country">
+                <p>Country</p>
+                <div class="data-shipping__country-container">
+                  <picture class="data-shipping__country-icon">
+                    <img src="./images/world.svg" alt="" />
+                  </picture>
+                  <select name="" id="" required>
+                    <option value="1" selected>Your country..</option>
+                    <option value="peru">Perú</option>
+                    <option value="mexico">México</option>
+                    <option value="unites states">Unites States</option>
+                  </select>
+                </div>
+              </div>
+              <div class="data-shipping__postalCode">
+                <p>Postal code</p>
+                <div class="data-shipping__postalCode-container">
+                  <picture class="data-shipping__postalCode-icon">
+                    <img src="./images/current.svg" alt="" />
+                  </picture>
+                  <input
+                    type="text"
+                    placeholder="Your postal code.."
+                    required
+                  />
+                </div>
+              </div>
+              <div class="data-shipping__checkbox">
+                <input type="checkbox" name="" id="" required />
+                <span>Save this information for next time</span>
+              </div>
+
+              <button class="data-shipping__btn">Continue</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="shopping-carts">
+          <div class="shopping-carts__products">
+            <section class="shopping-carts__product">
+              <picture class="carts-product__img">
+                <img src="./images/photo1.png" alt="" />
+              </picture>
+              <div class="carts-product__text">
+                <div class="carts-product__information">
+                  <p class="carts-product__name">Vintage Backbag</p>
+                  <div class="carts-product__price">
+                    <span class="carts-product__price-present">$54.99</span>
+                    <span class="carts-product__price-past">$94.99</span>
+                  </div>
+                </div>
+                <div class="carts-product__amount">
+                  <button class="carts-product__amount-less">-</button>
+                  <input type="text" class="carts-product__amount-value" />
+                  <button class="carts-product__amount-further">+</button>
+                </div>
+              </div>
+            </section>
+            <section class="shopping-carts__product">
+              <picture class="carts-product__img">
+                <img src="./images/photo2.png" alt="" />
+              </picture>
+              <div class="carts-product__text">
+                <div class="carts-product__information">
+                  <p class="carts-product__name">Levi Shoes</p>
+                  <div class="carts-product__price">
+                    <span class="carts-product__price-present">$74.99</span>
+                    <span class="carts-product__price-past">$124.99</span>
+                  </div>
+                </div>
+                <div class="carts-product__amount">
+                  <button class="carts-product__amount-less">-</button>
+                  <input type="text" class="carts-product__amount-value" />
+                  <button class="carts-product__amount-further">+</button>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="shopping-carts__totalPrice">
+            <div class="shopping-carts__shipping">
+              <p>Shipping</p>
+              <p>$19</p>
+            </div>
+            <div class="shopping-carts__total">
+              <p>Total</p>
+              <p>$148.98</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

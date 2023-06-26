@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+
+:root {
+  --color-gray: #4e5150;
+  --color-gray-2: #333;
+  --color-gray-3: #828282;
+  --color-gray-4: #4f4f4f;
+  --color-gray-5: #bdbdbd;
+  --color-gray-light: #f2f2f2;
+  --color-orange: #f2994a;
+  --color-white: #fff;
+  --font-Montserrat: "Montserrat", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-Montserrat);
+}
+
+input,
+select,
+button{
+    outline: none;
+}
+
+.container {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.content {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  gap: 7rem;
+}
+
+.container__title {
+  width: 75%;
+  margin: 0 auto 2rem;
+  color: var(--color-gray);
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  flex: 2 1 0;
+}
+
+.data-contact__title {
+  color: var(--color-gray-2);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.data-contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows:
+    repeat(2, calc(4rem + 0.3125rem)) 3rem repeat(4, calc(4rem + 0.3125rem))
+    2rem 3rem;
+  gap: 1rem;
+}
+
+.data-contact-form > div p {
+  height: 1rem;
+  color: var(--color-gray-4);
+  margin-bottom: 0.3125rem;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.data-contact-form input[type="text"],
+.data-contact-form input[type="email"],
+.data-contact-form select {
+  width: 100%;
+  height: 3rem;
+  color: var(--color-gray-2);
+  font-size: 16px;
+  padding: 0 3rem;
+  border: 1px solid var(--color-gray-3);
+  border-radius: 0.625rem;
+  background-color: var(--color-white);
+}
+
+.data-contact-form input::placeholder,
+.data-contact-form select,
+.data-contact-form select option {
+  color: var(--color-gray-3);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.data-contact-form > div > div {
+  position: relative;
+}
+
+.data-contact-form > div > div > picture {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.625rem;
+}
+
+/* DATA SHIPPING */
+.data-shipping__title {
+  color: var(--color-gray-2);
+  font-size: 18px;
+  font-weight: 600;
+  align-self: end;
+}
+
+.data-shipping__title,
+.data-contact__email,
+.data-contact__phone,
+.data-shipping__name,
+.data-shipping__address,
+.data-shipping__city,
+.data-shipping__checkbox {
+  grid-column: span 2;
+}
+
+.data-shipping__country,
+.data-shipping__postalCode {
+  grid-column: span 1;
+}
+
+.data-shipping__btn {
+  width: 70%;
+  grid-column: 2 / 3;
+  justify-self: end;
+  color: var(--color-white);
+  background-color: var(--color-orange);
+  border: 1px solid var(--color-orange);
+  border-radius: 0.625rem;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.data-shipping__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  color: var(--color-gray-4);
+  font-size: 12px;
+}
+
+/* SHOPPING CARTS */
+.shopping-carts {
+  height: max-content;
+  flex: 1 1 0;
+  background-color: var(--color-gray-light);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  border-radius: 0.625rem;
+}
+
+.shopping-carts__products {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.shopping-carts__product {
+  display: flex;
+  gap: 1rem;
+}
+
+.carts-product__img {
+  width: 120px;
+}
+
+.carts-product__img img {
+  width: 100%;
+  border-radius: 0.625rem;
+  flex: 1 1 0;
+}
+
+.carts-product__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 0;
+}
+
+.carts-product__information {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.carts-product__name {
+  color: var(--color-gray);
+  font-weight: 600;
+}
+
+.carts-product__price-present {
+  color: var(--color-orange);
+  font-weight: 600;
+}
+
+.carts-product__price-past {
+  color: var(--color-gray);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: line-through;
+}
+
+.carts-product__amount {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0.625rem;
+  border: 1px solid var(--color-gray-3);
+  border-radius: 0.625rem;
+}
+
+.carts-product__amount-value {
+  width: 2rem;
+  height: 1.25rem;
+  text-align: center;
+  color: var(--color-gray-2);
+  /* border: 1px solid var(--color-gray-3); */
+  border: none;
+  border-radius: 0.3125rem;
+}
+
+.carts-product__amount-less,
+.carts-product__amount-further {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: var(--color-gray-5);
+  border: none;
+  border-radius: 0.3125rem;
+  color: var(--color-gray-3);
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+}
+
+.shopping-carts__shipping,
+.shopping-carts__total {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-gray-2);
+  padding: 0.625rem 0;
+}
+
+.shopping-carts__shipping {
+  border: 1px solid var(--color-gray-5);
+  border-left: none;
+  border-right: none;
+}
+
+.shopping-carts__shipping p:first-child,
+.shopping-carts__total p:first-child {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.shopping-carts__shipping p:last-child,
+.shopping-carts__total p:last-child {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+  .container__title {
+    width: 90%;
+  }
+
+  .content {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .data {
+    order: 2;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .container__title {
+    font-size: 24px;
+  }
+
+  .carts-product__name {
+    font-size: 12px;
+  }
+
+  .carts-product__price-present {
+    font-size: 14px;
+  }
+
+  .carts-product__price-past {
+    font-size: 10px;
+  }
+
+  .shopping-carts__shipping p:first-child,
+  .shopping-carts__total p:first-child,
+  .shopping-carts__shipping p:last-child,
+  .shopping-carts__total p:last-child {
+    font-size: 14px;
+  }
+
+  .data-contact-form input[type="text"],
+  .data-contact-form input[type="email"],
+  .data-contact-form select {
+    padding: 0 1rem 0 2rem;
+  }
+
+  .data-contact-form input,
+  .data-contact-form input::placeholder,
+  .data-contact-form select,
+  .data-contact-form select option {
+    font-size: 12px;
+  }
+
+  .data-contact-form > div > div > picture img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .data-contact-form > div > div {
+    position: relative;
+  }
+
+  .data-contact-form > div > div > picture {
+    left: 0.3125rem;
+  }
+}
